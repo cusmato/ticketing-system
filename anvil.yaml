@@ -14,7 +14,7 @@ services:
   server_config: {}
 - source: /runtime/services/anvil/email.yml
   client_config: {}
-  server_config: {test_mode: false, custom_smtp: false}
+  server_config: {test_mode: true, custom_smtp: false}
 startup: {type: module, module: StartUp}
 package_name: Ticketing_System
 allow_embedding: true
@@ -23,7 +23,7 @@ runtime_options:
   version: 3
   client_version: '3'
   server_version: python3-full
-  server_spec: null
+  server_spec: {base: python310-standard}
   legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
   server_spec_disabled: {base: python310-standard, requirements: ''}
 metadata: {logo_img: 'asset:favicon.png'}
