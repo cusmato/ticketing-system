@@ -14,7 +14,7 @@ services:
   server_config: {enc_delegation_refresh_token: 2v3/cQ4HKzr8MMuYmuLc4iJheyCCfoeb3njblAF3XaNXvrmMoYbuPOligPUHK4ZGGFIQEU+Z8nIYEJC03WfoTgf/gSwqGQiSkg/b+98UeOo97WxRf6bgdrRE0IvJEII2Li6E6ll9EgTgC3jZHO2VXZmgD6V4TfKB4J717D6Of0nOqXhhGxcvJYCf3+OiERj2bniu96xfpc2hTCN8BkCD32ZUnTxnlOnPyNvp8aHYMUsGMYUdEpHeJg4079DMXxWJ94T8z7cBtZzgti4LhkdCLbErr20V+BERx8IAJjaD4VODsZIiRzcvLYBG0BDBlQ==}
 - source: /runtime/services/anvil/email.yml
   client_config: {}
-  server_config: {test_mode: true, custom_smtp: false}
+  server_config: {test_mode: true, custom_smtp: true}
 - source: /runtime/services/facebook.yml
   client_config: {}
   server_config: {}
