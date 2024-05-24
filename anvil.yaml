@@ -5,9 +5,9 @@ services:
   client_config: {enable_v2: true}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
-    confirm_email: true, allow_remember_me: true, remember_me_days: 30, use_google: true,
-    use_token: true}
+  client_config: {share_login_status: true, use_token: true, use_email: true, allow_remember_me: true,
+    allow_signup: true, enable_automatically: true, confirm_email: true, remember_me_days: 30,
+    use_google: true, use_facebook: true}
   server_config: {user_table: users}
 - source: /runtime/services/google.yml
   client_config: {}
@@ -15,6 +15,9 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {test_mode: true, custom_smtp: false}
+- source: /runtime/services/facebook.yml
+  client_config: {}
+  server_config: {}
 startup: {type: module, module: StartUp}
 package_name: Ticketing_System
 allow_embedding: true
